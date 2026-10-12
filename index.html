@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>황금잉어빵 | 팥붕어빵·슈크림붕어빵</title>
+<meta name="description" content="우리 앙꼬빵 세상에서 제일 맛있어요. 맛있는 팥빵과 슈크림빵, 황금잉어빵.">
+<style>
+:root{--gold:#C8962E;--gold-d:#A87A1C;--brown:#4A2C17;--cream:#FFF6E3;--line:#E8D5A8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif;color:var(--brown);background:var(--cream);line-height:1.7;font-size:18px}
+header{position:sticky;top:0;background:var(--brown);color:var(--cream);display:flex;align-items:center;justify-content:space-between;padding:10px 16px;z-index:10}
+header b{color:var(--gold);font-size:20px}
+header nav a{color:var(--cream);text-decoration:none;margin-left:14px;font-size:16px}
+section{padding:48px 20px;max-width:960px;margin:0 auto}
+h1,h2{margin:0 0 12px;line-height:1.3}
+h2{font-size:26px;text-align:center}
+h2::after{content:"";display:block;width:48px;height:4px;background:var(--gold);margin:10px auto 0;border-radius:2px}
+.hero{text-align:center;padding-top:36px}
+.hero h1{font-size:34px;color:var(--brown)}
+.hero p{font-size:20px}
+.ph{background:#d6d3cc;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#6b675f;font-size:15px;min-height:200px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:20px 0}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;background:var(--gold);color:#fff;font-weight:bold;text-decoration:none;border:0;font-size:18px;cursor:pointer;font-family:inherit}
+.btn:hover{background:var(--gold-d)}
+.btn.line{background:transparent;color:var(--brown);border:2px solid var(--gold)}
+.grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px}
+.card h3{margin:12px 0 4px}
+.band{background:var(--brown);color:var(--cream);max-width:none}
+.band>div{max-width:960px;margin:0 auto}
+form{max-width:520px;margin:24px auto 0;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}
+label{display:block;font-weight:bold;margin:12px 0 4px}
+input,textarea{width:100%;padding:12px;border:1px solid #cdb57a;border-radius:10px;font:inherit;background:#fffdf7}
+textarea{min-height:120px}
+.hp{position:absolute;left:-9999px;height:0;overflow:hidden}
+#msg{margin-top:12px;font-weight:bold;min-height:1.5em}
+footer{background:var(--brown);color:var(--cream);text-align:center;padding:28px 16px;font-size:15px}
+footer a{color:var(--gold)}
+@media(min-width:700px){.grid{grid-template-columns:1fr 1fr}.hero h1{font-size:46px}}
+</style>
+</head>
+<body>
+<header><b>황금잉어빵</b><nav><a href="#menu">메뉴</a><a href="#about">소개</a><a href="#contact">상담</a></nav></header>
+
+<section class="hero">
+  <div class="ph" style="min-height:240px">대표 사진 자리</div>
+  <h1 style="margin-top:24px">황금잉어빵</h1>
+  <p>우리 앙꼬빵 세상에서 제일 맛있어요.<br>맛있는 팥빵과 슈크림빵</p>
+  <div class="btns">
+    <a class="btn" href="tel:01092770338">전화하기 010-9277-0338</a>
+    <a class="btn line" href="#contact">상담 신청</a>
+  </div>
+</section>
+
+<section id="menu">
+  <h2>메뉴</h2>
+  <div class="grid">
+    <div class="card"><div class="ph">팥붕어빵 사진 자리</div><h3>팥붕어빵</h3><p>달콤한 앙꼬가 가득한 붕어빵. 가격은 문의해 주세요.</p></div>
+    <div class="card"><div class="ph">슈크림붕어빵 사진 자리</div><h3>슈크림붕어빵</h3><p>부드러운 슈크림이 들어간 붕어빵. 가격은 문의해 주세요.</p></div>
+  </div>
+</section>
+
+<section class="band" id="about"><div>
+  <h2 style="color:var(--gold)">황금잉어빵 소개</h2>
+  <p style="text-align:center">우리 앙꼬빵은 세상에서 제일 맛있다고 자신합니다.<br>팥빵과 슈크림빵, 두 가지 맛을 만나 보세요.</p>
+  <div class="ph" style="margin-top:20px">가게 사진 자리</div>
+</div></section>
+
+<section id="contact">
+  <h2>상담 신청</h2>
+  <p style="text-align:center">이름과 전화번호를 남겨 주시면 연락드릴게요.</p>
+  <form id="f" novalidate>
+    <label for="n">이름</label>
+    <input id="n" name="name" maxlength="50" autocomplete="name" required>
+    <label for="p">전화번호</label>
+    <input id="p" name="phone" maxlength="20" inputmode="tel" autocomplete="tel" required>
+    <label for="m">문의 내용</label>
+    <textarea id="m" name="message" maxlength="1000"></textarea>
+    <div class="hp" aria-hidden="true"><label>비워 두세요<input name="website" tabindex="-1" autocomplete="off"></label></div>
+    <button class="btn" id="go" type="submit" style="width:100%;margin-top:16px">상담 신청하기</button>
+    <div id="msg" role="status"></div>
+  </form>
+</section>
+
+<footer>
+  <p><b>황금잉어빵</b></p>
+  <p>전화 <a href="tel:01092770338">010-9277-0338</a> · 이메일 <a href="mailto:taesunghyuk@gmail.com">taesunghyuk@gmail.com</a></p>
+  <p>영업 장소·시간: 준비 중</p>
+</footer>
+
+<script>
+var ENDPOINT="https://script.google.com/macros/s/AKfycbyPnCI43J-_BsSv5gwwH6DPDciuU3cCaCGWFNw6SK7kxjA3d7ikqosArA9hOzLt1ewSLQ/exec";
+var f=document.getElementById("f"),msg=document.getElementById("msg"),go=document.getElementById("go");
+f.addEventListener("submit",function(e){
+  e.preventDefault();
+  var n=f.name.value.trim(),p=f.phone.value.trim();
+  if(!n){msg.textContent="이름을 적어 주세요.";return}
+  if(!/^[0-9+\-\s()]{7,20}$/.test(p)){msg.textContent="전화번호를 숫자로 적어 주세요.";return}
+  if(ENDPOINT.indexOf("http")!==0){msg.textContent="신청 기능을 준비 중이에요. 전화로 문의해 주세요.";return}
+  go.disabled=true;msg.textContent="보내는 중…";
+  fetch(ENDPOINT,{method:"POST",body:new URLSearchParams(new FormData(f))})
+    .then(function(r){return r.json()})
+    .then(function(j){
+      if(j.ok){msg.textContent="신청이 접수되었어요. 곧 연락드릴게요!";f.reset()}
+      else{msg.textContent=j.error||"접수에 실패했어요. 전화로 문의해 주세요."}
+    })
+    .catch(function(){msg.textContent="전송에 문제가 있어요. 전화로 문의해 주세요."})
+    .finally(function(){go.disabled=false});
+});
+</script>
+</body>
+</html>
